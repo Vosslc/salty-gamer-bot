@@ -29,7 +29,8 @@ client.on("message", (msg) => {
       try {
         let data = await API.MWcombatmp("Vos#11272", "battle");
         console.log("battle net account found");
-        let kdData = data.summary.all.kdRatio;
+        let kdData = data.summary.war.kdRatio;
+        console.log(data.summary)
         let usernameData = await API.getLoggedInIdentities();
         // console.log(usernameData.titleIdentities)
         msg.reply(
